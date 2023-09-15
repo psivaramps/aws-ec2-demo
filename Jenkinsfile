@@ -27,7 +27,7 @@ pipeline {
                 }
                 }
             }
-        }
+       // }
 
         stage('Create EC2 Instance in eu-west-1') {
             steps {
