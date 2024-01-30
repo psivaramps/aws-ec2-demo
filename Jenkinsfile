@@ -17,7 +17,7 @@ pipeline {
                     //sh "aws ec2 create-tags --resources ami-01c647eace872fc02 --tags Key=pl-web-server-dev,Value=DEV"
                 }
             }
-        }
+       // }
 
         stage('Create EC2 Instance in ap-south-1') {
             steps {
@@ -27,7 +27,7 @@ pipeline {
                 }
                 }
             }
-        }
+       // }
 
         stage('Create EC2 Instance in eu-west-1') {
             steps {
@@ -38,4 +38,4 @@ pipeline {
             }
         }
     }
-
+}
