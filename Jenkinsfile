@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-   // environment {
+    environment {
         AWS_ACCESS_KEY_ID     = credentials('jenkins_aws')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins_aws')
         AWS_DEFAULT_REGION_US_EAST_1 = 'us-east-1'
         AWS_DEFAULT_REGION_AP_SOUTH_1 = 'ap-south-1'
         AWS_DEFAULT_REGION_EU_WEST_1 = 'eu-west-2'
-  //  }
+    }
 
     stages {
         stage('Create EC2 Instance in us-east-1') {
