@@ -5,8 +5,8 @@ pipeline {
         AWS_ACCESS_KEY_ID     = credentials('jenkins_aws')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins_aws')
         AWS_DEFAULT_REGION_US_EAST_1 = 'us-east-1'
-        AWS_DEFAULT_REGION_AP_SOUTH_1 = 'ap-south-1'
-        AWS_DEFAULT_REGION_EU_WEST_1 = 'eu-west-2'
+        //AWS_DEFAULT_REGION_AP_SOUTH_1 = 'ap-south-1'
+        //AWS_DEFAULT_REGION_EU_WEST_1 = 'eu-west-2'
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        stage('Create EC2 Instance in ap-south-1') {
+       /* stage('Create EC2 Instance in ap-south-1') {
             steps {
                 script {
                     sh "aws ec2 run-instances --image-id ami-02bb7d8191b50f4bb --instance-type t2.micro --key-name my-aws-demo-key --security-group-ids sg-0061d71cb1c9cd10b --subnet-id subnet-05cde3768f3c7917c --count 1 --region $AWS_DEFAULT_REGION_AP_SOUTH_1 --user-data file://uat_startup.sh"
@@ -36,6 +36,6 @@ pipeline {
                    // sh "aws ec2 create-tags --resources ami-0b1b00f4f0d09d131 --tags Key=pl-web-server-prod,Value=PROD"
                 }
             }
-        }
+        }*/
     }
 }
